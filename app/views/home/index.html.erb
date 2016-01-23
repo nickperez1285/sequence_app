@@ -1,0 +1,52 @@
+
+<body>
+	<tr><center><h1>Mission Sequence </h1></center>
+		<center><h3>Bicycle Company</h3></center>
+		<center>
+			<div class="menu">
+				<a href="#">About Us</a>
+				<a href="#">Contact</a>
+			</div>
+		</center><hr>
+	</tr>
+
+	<table>
+
+		<td id = "left-col">
+			<%= render(:partial => "bike") %> 
+
+		</td>
+		<td id = "right-col">
+			<%= render(:partial => "info") %> 
+
+		</td>			
+
+		<div class="slider-nav">
+			<a href="#" class="arrow-prev"><img src="/assets/left_arrow.png"></a>
+			<a href="#" class="arrow-next"><img src= "/assets/right_arrow.png"></a></div>
+		</div> 
+
+		<div class = "current"> @current_item</div>	
+
+
+
+
+
+
+		<script>
+			// var item = $('#current')
+			// $(".arrow-next").click(function(){
+			// 	 // var item = <%= @current_item %> 
+			// 	 item = item + 1
+			// 	 $('#current').text(item)
+			// 	})
+			
+
+
+		</script>
+
+
+
+
+	</body>
+</table>
