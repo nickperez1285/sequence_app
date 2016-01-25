@@ -2,7 +2,7 @@
 <table>
 <tr>Description:  <%=@description[@index.value]%></tr><br><br>
 <tr>Price:  <%= @price[@index.value]%></tr><br><br>
-<center> Images</center>
+<center><div id = "title" >Images</div></center>
 <tr> <%@image[@index.value].each do |img|%></tr>
 <%= img %><br>
 <%end%>

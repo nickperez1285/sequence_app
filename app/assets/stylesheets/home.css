@@ -26,7 +26,11 @@ tr{
 }
 
 
-
+#title {
+  border: solid;
+  border-color: 'black';
+  border-radius: 25px ;
+}
 
 .slider-nav {
   text-align: center;
