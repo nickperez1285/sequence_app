@@ -1,52 +1,38 @@
 
 <body>
-	<tr><center><h1>Mission Sequence </h1></center>
-		<center><h3>Bicycle Company</h3></center>
-		<center>
-			<div class="menu">
-				<a href="#">About Us</a>
-				<a href="#">Contact</a>
-			</div>
-		</center><hr>
-	</tr>
+	<center>
+		<h1>Mission Sequence </h1>
+		<h3>Bicycle Company</h3>
 
+	</center>
+	<hr>
+	
+	<!-- all infomation and pictures are stored in arrays and indexed  -->
 	<table>
-
+		<!-- left column for primary image iterations through @picture array in home sontroller  -->
 		<td id = "left-col">
+		<center>	<%=@name[@index.value]%></center>
 			<%= render(:partial => "bike") %> 
 
 		</td>
+		<!-- right column displays information about current bike -->	
 		<td id = "right-col">
 			<%= render(:partial => "info") %> 
-
 		</td>			
-
-		<div class="slider-nav">
-			<a href="#" class="arrow-prev"><img src="/assets/left_arrow.png"></a>
-			<a href="#" class="arrow-next"><img src= "/assets/right_arrow.png"></a></div>
-		</div> 
-
-		<div class = "current"> @current_item</div>	
-
-
-
-
-
-
-		<script>
-			// var item = $('#current')
-			// $(".arrow-next").click(function(){
-			// 	 // var item = <%= @current_item %> 
-			// 	 item = item + 1
-			// 	 $('#current').text(item)
-			// 	})
+	</table>
+	<center>
+	<table id = "navbar">
+		<td>
+		Previous
+			<%= link_to image_tag("/assets/left_arrow.png"), :action => 'previous', :id => @index.id , :remote => true %> 
 			
+		</td>
+		<td>    </td>
+		<td>
+			<%= link_to image_tag("/assets/right_arrow.png"), :action => 'next', :id => @index.id , :remote => true %> 
+			Next
+		</td>
+	</table>
+	</center>
 
-
-		</script>
-
-
-
-
-	</body>
-</table>
+</body>

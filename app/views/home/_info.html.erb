@@ -1,8 +1,11 @@
 
 <table>
-<section>Name:  <%=@name [@current_item]%></section><br>
-<section>Description:  <%=@description[@current_item]%></section><br>
-<section>Price:  <%= @price[@current_item]%></section><br>
-<section>Images:  <%=@image[@current_item]%></section>
+<tr>Description:  <%=@description[@index.value]%></tr><br><br>
+<tr>Price:  <%= @price[@index.value]%></tr><br><br>
+<center> Images</center>
+<tr> <%@image[@index.value].each do |img|%></tr>
+<%= img %><br>
+<%end%>
+
  </table>
 	
